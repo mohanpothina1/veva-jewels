@@ -1,0 +1,101 @@
+/* Banner Image */
+.banner-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Sort By Dropdown */
+  .sort-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 30px 10px;
+  }
+  
+  .sort-label {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #504e63;
+  }
+  
+  .sort-select {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #504e63;
+  }
+  
+  /* Coins Section */
+  .coins-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .coins-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #8b8b8b;
+  }
+  
+  .coins-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  .coin-card {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+  }
+  
+  .coin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .coin-image {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .coin-name {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #504e63;
+  }
+  
+  .coin-price {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #8b8b8b;
+  }
+  
+  .coin-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #8b8b8b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .coin-button:hover {
+    background-color: #6f6f6f;
+  }
+  

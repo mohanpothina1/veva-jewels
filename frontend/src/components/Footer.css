@@ -1,0 +1,93 @@
+/* Footer Container */
+.footer {
+    background-color: #B76E79  ; /* Soft Pink Rose Background */
+    color: #504e63; /* Subtle Dark Gray for Text */
+    padding:60px 40px 20px;
+    font-family: 'Arial', sans-serif;
+    margin-top: 0;
+  }
+  
+  /* Footer Layout */
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  /* Brand Section */
+  .footer-brand h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color:#F5F5F5; /* Pink Rose Heading */
+  }
+  
+  .footer-brand p {
+    font-size: 1rem;
+    color: #fff; /* Subtle Dark Gray */
+  }
+  
+  /* Links Section */
+  .footer-links h4,
+  .footer-contact h4,
+  .footer-social h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffff; /* Pink Rose Heading */
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #444444 ; /* Subtle Dark Gray */
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #F8EDED ; /* Pink Rose Hover */
+  }
+  
+  /* Contact Section */
+  .footer-contact p {
+    font-size: 0.9rem;
+    color: #444444; /* Subtle Dark Gray */
+    margin-bottom: 5px;
+  }
+  
+  /* Social Media Section */
+  .footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .footer-social .social-icons a {
+    font-size: 1.2rem;
+    color: #fff; /* Subtle Dark Gray */
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social .social-icons a:hover {
+    color: #e89f9f; /* Pink Rose */
+  }
+  
+  /* Bottom Copyright Section */
+  .footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #fde2e2; /* Very Light Pink Border */
+    padding-top: 10px;
+    font-size: 0.8rem;
+    color: #fff; /* Subtle Dark Gray */
+  }
+  

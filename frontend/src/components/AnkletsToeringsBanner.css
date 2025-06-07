@@ -1,0 +1,125 @@
+.anklets-banner {
+    width: 100%;
+    margin: 60px 0;
+    position: relative;
+  }
+  
+  .banner-image-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 20.83%; /* This maintains the 1920x400 aspect ratio (400/1920 = 0.2083) */
+    overflow: hidden;
+  }
+  
+  .banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .banner-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+  }
+  
+  .banner-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .banner-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .shop-now-button {
+    background-color: #d36e70;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .shop-now-button:hover {
+    background-color: #c05b5d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .banner-title {
+      font-size: 3.5rem;
+    }
+    
+    .banner-subtitle {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .banner-title {
+      font-size: 2.8rem;
+    }
+    
+    .banner-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    
+    .shop-now-button {
+      padding: 12px 30px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .banner-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .banner-subtitle {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+    
+    .shop-now-button {
+      padding: 10px 25px;
+    }
+    
+    .anklets-banner {
+      margin: 40px 0;
+    }
+  }

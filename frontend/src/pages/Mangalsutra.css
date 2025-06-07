@@ -1,0 +1,250 @@
+/* Mangalsutra.css */
+/* Global Page Background */
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Banner Image */
+  .banner-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 5px solid #8e6c88; /* Unique accent color for mangalsutras */
+  }
+  
+  /* Sort By Dropdown */
+  .sort-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 30px 10px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .sort-label {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .sort-select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #8e6c88;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .sort-select:hover,
+  .sort-select:focus {
+    border-color: #7a5b74;
+    box-shadow: 0 0 8px rgba(142, 108, 136, 0.5);
+    outline: none;
+  }
+  
+  /* Mangalsutras Section */
+  .mangalsutra-page {
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 150px;
+    margin-top: -20px;
+    margin-bottom: 50px;
+  }
+  
+  /* Mangalsutras Grid */
+  .mangalsutras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .mangalsutra-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border: 1px solid #e6e6e6;
+    border-radius: 15px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .mangalsutra-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .mangalsutra-image-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+  }
+  
+  .mangalsutra-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .mangalsutra-card:hover .mangalsutra-image {
+    transform: scale(1.1);
+  }
+  
+  .mangalsutra-name {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #777777;
+    margin: 10px 0 5px;
+    padding: 0 15px;
+  }
+  
+  .mangalsutra-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+    padding: 0 15px;
+  }
+  
+  .mangalsutra-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #8e6c88;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(142, 108, 136, 0.4);
+    margin: 15px;
+    align-self: stretch;
+  }
+  
+  .mangalsutra-button:hover {
+    background-color: #7a5b74;
+    box-shadow: 0px 6px 15px rgba(122, 91, 116, 0.5);
+  }
+  
+  .mangalsutra-button:active {
+    transform: scale(0.95);
+  }
+  
+  .mangalsutra-rating {
+    padding: 0 15px;
+    color: #ffb400;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .mangalsutras-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  
+    .mangalsutra-card {
+      padding: 15px;
+    }
+  
+    .mangalsutra-button {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  .error-message {
+    text-align: center;
+    color: #8e6c88;
+    margin-top: 50px;
+    font-size: 1.2rem;
+  }
+
+  .cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.cart-modal {
+  background-color: #fff;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.cart-modal-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.cart-modal-content img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.view-cart-button,
+.checkout-button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-cart-button {
+  background-color: #f7d7e0;
+  color: #c2185b;
+  font-weight: bold;
+}
+
+.checkout-button {
+  background-color: #B76E79;
+  color: white;
+  font-weight: bold;
+}
+
+.close-button {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

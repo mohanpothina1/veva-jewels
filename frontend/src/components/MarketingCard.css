@@ -1,0 +1,47 @@
+.marketing-card {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .marketing-heading {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+    color: #B76E79;
+  }
+  
+  .marketing-content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  .card {
+    text-align: center;
+    width: 500px;
+    height: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-title {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #444444;
+  }
+  

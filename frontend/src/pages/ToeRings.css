@@ -1,0 +1,250 @@
+/* ToeRings.css */
+/* Global Page Background */
+body {
+  background-color: #ffffff; /* White Background */
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Ensures consistent font */
+}
+
+/* Banner Image */
+.banner-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 5px solid #fff; /* Accent Border */
+}
+
+/* Sort By Dropdown */
+.sort-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px 30px 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sort-label {
+  margin-right: 10px;
+  font-size: 1rem;
+  color: #333; /* Neutral Gray */
+}
+
+.sort-select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #d36e70;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.sort-select:hover,
+.sort-select:focus {
+  border-color: #c05b5d;
+  box-shadow: 0 0 8px rgba(211, 110, 112, 0.5);
+  outline: none;
+}
+
+/* Toe Rings Section */
+.toe-rings-page {
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 150px;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+.toe-rings-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #d36e70;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Toe Rings Grid */
+.toe-rings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.toe-ring-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures items are spaced properly */
+  height: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 15px;
+  background-color: #ffffff; /* White Background for Cards */
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.toe-ring-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.toe-ring-image-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 300px; /* Increase the height for larger images */
+}
+
+.toe-ring-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.toe-ring-card:hover .toe-ring-image {
+  transform: scale(1.1);
+}
+
+.toe-ring-details {
+  flex: 1; /* Ensures this section grows to fill space */
+  padding: 15px;
+  text-align: center;
+  color: #504e63;
+}
+
+.toe-ring-name {
+  font-size: 1.2rem;
+  font-weight: normal; /* Normal weight for the name */
+  color: #777777; /* Grey color for the product name */
+  margin: 10px 0 5px;
+}
+
+.toe-ring-price {
+  font-size: 1rem;
+  font-weight: bold; /* Bold for the price */
+  color: #000000; /* Black color for the price */
+  margin-bottom: 15px;
+}
+
+.toe-ring-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #d36e70;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(211, 110, 112, 0.4);
+  margin: 15px; /* Adds spacing from the content above */
+  align-self: stretch; /* Makes the button span the full width of the card */
+}
+
+.toe-ring-button:hover {
+  background-color: #c05b5d;
+  box-shadow: 0px 6px 15px rgba(192, 91, 93, 0.5);
+}
+
+.toe-ring-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .toe-rings-title {
+    font-size: 2rem;
+  }
+
+  .toe-ring-card {
+    padding: 15px;
+  }
+
+  .toe-ring-button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.cart-modal {
+  background-color: #fff;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.cart-modal-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.cart-modal-content img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.view-cart-button,
+.checkout-button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-cart-button {
+  background-color: #f7d7e0;
+  color: #c2185b;
+  font-weight: bold;
+}
+
+.checkout-button {
+  background-color: #B76E79;
+  color: white;
+  font-weight: bold;
+}
+
+.close-button {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

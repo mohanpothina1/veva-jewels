@@ -1,0 +1,16 @@
+/* Ensure the banner container stretches to the full width */
+.banner-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Prevents overflow issues */
+    margin: 0; /* Removes any default margin */
+    padding: 0; /* Removes any default padding */
+  }
+  
+  /* Ensure the image fits perfectly in the browser window */
+  .banner-image {
+    width: 100vw; /* 100% of the viewport width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove unwanted gaps below the image */
+  }
+  

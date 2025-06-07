@@ -1,0 +1,74 @@
+/* AboutUs.css */
+
+.about-us-container {
+    font-family: "Arial", sans-serif;
+    color: #333;
+    padding: 2rem;
+  }
+  
+  .about-us-hero {
+    background: url("https://via.placeholder.com/1200x400") center/cover no-repeat;
+    text-align: center;
+    padding: 6rem 2rem;
+    color: white;
+  }
+  
+  .about-us-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-us-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  .about-us-content {
+    margin-top: 4rem;
+  }
+  
+  .about-us-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    gap: 2rem;
+  }
+  
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .about-us-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-us-text {
+    width: 50%;
+  }
+  
+  .about-us-text h2 {
+    font-size: 2.5rem;
+    color: #111;
+    margin-bottom: 1rem;
+  }
+  
+  .about-us-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+  }
+  
+  @media (max-width: 768px) {
+    .about-us-section {
+      flex-direction: column;
+    }
+  
+    .about-us-image, .about-us-text {
+      width: 100%;
+    }
+  }
+  

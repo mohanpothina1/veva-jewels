@@ -1,0 +1,174 @@
+/* KumkumBox.css */
+.kumkum-page {
+  max-width: 1200px;
+  margin: 80px auto 60px; /* Top margin for navbar, bottom for footer */
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+}
+
+/* Header with title and sort */
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.page-title {
+  font-size: 2rem;
+  color: #d36e70;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sort-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.results-count {
+  font-size: 1rem;
+  color: #555;
+}
+
+.sort-label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.sort-select {
+  padding: 8px 15px;
+  border: 1px solid #d36e70;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.sort-select:hover {
+  border-color: #c05b5d;
+  box-shadow: 0 0 8px rgba(211, 110, 112, 0.2);
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 40px; /* Space before footer */
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  background: white;
+}
+
+.product-image-container {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-rating {
+  font-size: 0.8rem;
+  color: #ffa41c;
+  margin-bottom: 8px;
+}
+
+.product-name {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 5px 0;
+  text-align: center;
+  font-weight: 500;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  margin: 10px 0 15px;
+}
+
+.add-to-cart-btn {
+  padding: 10px 20px;
+  background-color: #d36e70;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #c05b5d;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .sort-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

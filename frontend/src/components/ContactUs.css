@@ -1,0 +1,104 @@
+/* ContactUs.css */
+
+.contact-us-container {
+    font-family: "Arial", sans-serif;
+    color: #333;
+    padding: 2rem;
+  }
+  
+  .contact-us-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: url("https://via.placeholder.com/1200x400") center/cover no-repeat;
+    color: white;
+  }
+  
+  .contact-us-header h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-us-header p {
+    font-size: 1.5rem;
+  }
+  
+  .contact-us-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    gap: 3rem;
+  }
+  
+  .contact-form, .contact-details {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-form h2, .contact-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+  }
+  
+  .contact-form form input, .contact-form form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact-form form textarea {
+    height: 120px;
+  }
+  
+  .submit-btn {
+    background: #ff6700;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background: #e55d00;
+  }
+  
+  .contact-details p {
+    margin: 0.8rem 0;
+    font-size: 1.2rem;
+  }
+  
+  .social-icons {
+    margin-top: 1rem;
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: #ff6700;
+    font-weight: bold;
+  }
+  
+  .social-icons a:hover {
+    color: #e55d00;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-us-content {
+      flex-direction: column;
+    }
+  }
+  

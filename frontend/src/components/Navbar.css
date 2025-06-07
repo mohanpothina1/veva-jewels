@@ -1,0 +1,374 @@
+/* General Navbar Styling */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 15px 40px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 1000;
+}
+
+/* Top Section */
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+/* Brand Name */
+.navbar-left .navbar-brand {
+  font-family: "Georgia", serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #B76E79;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-left .navbar-brand:hover {
+  color: #d4a6b1;
+  transform: scale(1.02);
+}
+
+
+/* Updated Search Container */
+.search-container {
+  position: relative;
+  width: 600px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  width: 100%;
+  height: 100%;
+  padding: 0 80px 0 20px;
+  border: 2px solid #B76E79;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.clear-button {
+  position: absolute;
+  right: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #aaa;
+  border: none;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-button:hover {
+  color: #B76E79;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.clear-icon {
+  font-size: 14px;
+}
+
+.search-button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #B76E79;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Updated Suggestions Dropdown */
+/* Enhanced Suggestions Dropdown */
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 5px 105px rgba(0, 0, 0, 0.8);
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 0;
+  z-index: 1000;
+  padding: 5px 0;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.suggestion-item {
+  padding: 12px 25px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.suggestion-item:hover {
+  background-color: #fff9fb;
+  color: #B76E79;
+  padding-left: 30px;
+}
+
+.suggestion-item::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  width: 6px;
+  height: 6px;
+  background-color: #B76E79;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.suggestion-item:hover::before {
+  opacity: 1;
+  left: 20px;
+}
+
+.suggestion-item + .suggestion-item {
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Highlight matching text */
+.suggestion-highlight {
+  font-weight: 600;
+  color: #B76E79;
+}
+
+/* Scrollbar styling */
+.suggestions-dropdown::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 0 0 15px 0;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-track {
+  background: #f9f9f9;
+  border-radius: 0 0 15px 0;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-thumb {
+  background-color: #e0c0c6;
+  border-radius: 3px;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-thumb:hover {
+  background-color: #d4a6b1;
+}
+/* Icons Section - UPDATED */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: 60px;
+}
+
+.icon:hover {
+  transform: translateY(-3px);
+}
+
+.icon-style {
+  font-size: 24px;
+  color: #B76E79;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.icon:hover .icon-style {
+  color: #d4a6b1;
+  transform: scale(1.2);
+}
+
+.icon-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.icon:hover .icon-text {
+  color: #B76E79;
+}
+
+.icon:last-child {
+  margin-right: 0;
+}
+
+/* Rest of your existing CSS remains the same */
+.inline-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px 0;
+  background-color: #fff;
+}
+
+/* ... (keep all other existing CSS rules) ... */
+.menu-item {
+  position: relative;
+  margin: 0 20px;
+  font-size: 16px;
+  font-weight: 400; /* Lighter font */
+  color: #333;
+  cursor: pointer;
+}
+
+.menu-link {
+  text-decoration: none !important; /* Force no underline */
+  color: inherit;
+}
+
+/* Ensure no underline on hover */
+.menu-link:hover {
+  text-decoration: none !important;
+}
+.menu-item:hover {
+  color: #B76E79;
+}
+
+.caret-icon {
+  font-size: 12px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover .caret-icon {
+  transform: rotate(180deg); /* Rotate icon on hover */
+  color: #B76E79;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+  min-width: 150px;
+  padding: 10px 0; 
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.dropdown-content a:hover {
+  background-color: #f3edf0;
+  color: #B76E79;
+}
+
+/* Show Dropdown with Hover */
+.menu-item:hover .dropdown-content {
+  display: block;
+}
+
+/* Add a small buffer area to prevent accidental hiding */
+.menu-item:hover {
+  background-color: transparent; /* Keep hover effect active */
+}
+.suggestions-dropdown {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 5px;
+  z-index: 10;
+  padding: 5px 0;
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.02);
+}
+
+.suggestion-item + .suggestion-item {
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Highlight suggestion on hover */
+.suggestion-item:hover {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+/* Scrollbar customization */
+.suggestions-dropdown::-webkit-scrollbar {
+  width: 8px;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-thumb {
+  background-color: #dcdcdc;
+  border-radius: 5px;
+}
+
+.suggestions-dropdown::-webkit-scrollbar-thumb:hover {
+  background-color: #bdbdbd;
+}

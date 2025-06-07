@@ -1,0 +1,101 @@
+/* Banner Image */
+.banner-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Sort By Dropdown */
+  .sort-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 30px 10px;
+  }
+  
+  .sort-label {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #504e63;
+  }
+  
+  .sort-select {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #d36e70; /* Soft Rose Pink */
+    border-radius: 5px;
+    background-color: #fff;
+    color: #504e63;
+  }
+  
+  /* Earrings Section */
+  .earrings-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .earrings-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #d36e70; /* Soft Rose Pink */
+  }
+  
+  .earrings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  .earring-card {
+    border: 1px solid #f1c3c3; /* Light Pink Border */
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+  }
+  
+  .earring-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .earring-image {
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .earring-name {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #504e63;
+  }
+  
+  .earring-price {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #d36e70; /* Soft Rose Pink */
+  }
+  
+  .earring-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #d36e70;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .earring-button:hover {
+    background-color: #c05b5d; /* Slightly Darker Rose Pink */
+  }
+  

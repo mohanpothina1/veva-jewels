@@ -1,0 +1,104 @@
+.shop-by-recipient {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #B76E79;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .recipient-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .recipient-card {
+    flex: 1;
+    min-width: 300px;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .recipient-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+  
+  .men-card {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://fossil.scene7.com/is/image/FossilPartners/JF04851998_onmodel?$sfcc_onmodel_large$');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .women-card {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('https://m.media-amazon.com/images/I/51EH2N5LorL._AC_UY1100_.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    color: white;
+    text-align: left;
+  }
+  
+  .card-content h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .shop-now-btn {
+    background-color: #d36e70;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .shop-now-btn:hover {
+    background-color: #c05b5d;
+  }
+  
+  @media (max-width: 768px) {
+    .recipient-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .recipient-card {
+      width: 100%;
+      max-width: 500px;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }

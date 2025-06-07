@@ -1,0 +1,14 @@
+# Common
+.DS_Store
+node_modules/
+dist/
+build/
+.env
+
+# Backend (Maven)
+backend/target/
+
+# IntelliJ/VSCode
+*.iml
+.idea/
+.vscode/

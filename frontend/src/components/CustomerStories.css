@@ -1,0 +1,57 @@
+/* General container styles */
+.customer-stories {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .customer-stories-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #B76E79 ;
+  }
+  
+  /* Card grid container */
+  .customer-stories-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual card styles */
+  .customer-stories-card {
+    background-color: #ffeef0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; /* Fixed width for the card */
+    height: 220px; /* Fixed height for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .customer-stories-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .customer-stories-comment {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+  /* Image styles */
+  .customer-stories-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
