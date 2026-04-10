@@ -1,0 +1,117 @@
+public class Module {
+    public String name;
+    public String power_on;
+    public String power_off;
+
+    public boolean isAsciiBased;   
+}
+
+{
+  "name": "136-174MHz",
+  "power_on": "43,4f,2e,50,53,2e,53,2c,31,0d,0a",
+  "power_off": "43,4f,2e,50,53,2e,53,2c,30,0d,0a",
+  "isAsciiBased": true
+}
+
+Modify ControlCardSocketHandler
+
+private boolean isAsciiBased = false;
+public void setAsciiBased(boolean asciiBased) {
+    this.isAsciiBased = asciiBased;
+}
+👉 Just after creating handler, add this:
+boolean asciiBand = false;
+
+for (Module m : card.modules) {
+    if (m.isAsciiBased) {
+        asciiBand = true;
+        break;
+    }
+}
+
+handler.setAsciiBased(asciiBand);   
+
+
+private void handleFrame(byte[] frame) {
+
+    // 🔥 ASCII handling
+    if (isAsciiBased) {
+        handleAsciiResponse(frame);
+        return;
+    }
+
+    // 🔥 Normal binary handling
+    if (!verifyXor(frame)) {
+        System.out.println("XOR failed: " + bytesToHex(frame));
+        return;
+    }
+
+    HardwareData data = parseFrame(frame);
+    this.lastData = data;
+
+    if (dataCallback != null) {
+        dataCallback.accept(data);
+    }
+
+    System.out.println("VSWR: " + data.vswr +
+            " TEMP: " + data.temp +
+            " FWD: " + data.fwd +
+            " RFL: " + data.rfl);
+}
+
+
+private void handleAsciiResponse(byte[] frame) {
+
+    String response = new String(frame).trim();
+    System.out.println("ASCII Response: " + response);
+
+    HardwareData data = new HardwareData();
+
+    // 🔥 Basic ON/OFF detection (adjust if needed)
+    if (response.contains("1") || response.toUpperCase().contains("ON")) {
+        data.paOn = true;
+    } else {
+        data.paOn = false;
+    }
+
+    // No telemetry available
+    data.vswr = 0;
+    data.temp = 0;
+    data.fwd = data.paOn ? 1 : 0;
+    data.rfl = 0;
+
+    this.lastData = data;
+
+    if (dataCallback != null) {
+        dataCallback.accept(data);
+    }
+}
+
+
+private void startAutoPolling() {
+
+    // 🔥 skip polling for ASCII bands
+    if (isAsciiBased) {
+        return;
+    }
+
+    if (statusCommand == null) return;
+
+    scheduler = Executors.newSingleThreadScheduledExecutor();
+
+    scheduler.scheduleAtFixedRate(() -> {
+        if (connected.get() && statusCommand != null) {
+            enqueueCommand(statusCommand);
+        }
+    }, 0, 1, TimeUnit.SECONDS);
+}
+
+
+private boolean isAsciiFrame(byte[] frame) {
+    for (byte b : frame) {
+        if (b < 0x20 || b > 0x7E) {
+            return false;
+        }
+    }
+    return true;
+}
