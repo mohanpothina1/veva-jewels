@@ -1,5 +1,43 @@
 package modcontrol.ui;
 
+private static String extract(String block, String key) {
+
+    int i = block.indexOf("\"" + key + "\":");
+
+    if (i == -1)
+        return "";
+
+    int start = block.indexOf(":", i) + 1;
+
+    if (start <= 0 || start >= block.length())
+        return "";
+
+    char first = block.charAt(start);
+
+    // STRING VALUE
+    if (first == '"') {
+
+        int end = block.indexOf("\"", start + 1);
+
+        if (end == -1)
+            return "";
+
+        return block.substring(start + 1, end);
+    }
+
+    // BOOLEAN / NUMBER VALUE
+    int end = start;
+
+    while (end < block.length()
+            && block.charAt(end) != ','
+            && block.charAt(end) != '}') {
+
+        end++;
+    }
+
+    return block.substring(start, end).trim();
+}
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Cursor;
